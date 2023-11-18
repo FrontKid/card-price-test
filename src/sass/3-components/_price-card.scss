@@ -1,0 +1,20 @@
+.price-card {
+  padding-block: 32px;
+  
+  @include tablet {
+    padding-block: 62px
+  }
+  @include desctop {
+    padding-block: 82px
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+}
+
