@@ -4,12 +4,241 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Price card</title>
-    <script type="module" crossorigin src="/card-price-test/assets/index-fCOj9f68.js"></script>
-    <link rel="stylesheet" crossorigin href="/card-price-test/assets/index-8JgqOcjE.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/card-price-test/assets/index-fLipbp9l.js"></script>
+    <link rel="stylesheet" crossorigin href="/card-price-test/assets/index-dqVJnWL3.css">
   </head>
   <body>
-    <section class="container">
-      <h1 class="initial">Initial setup</h1>
+    <section class="price-card container">
+      <h2 class="price-card__title title">Pricing plans</h2>
+      <p class="price-card__subtitle subtitle">Every plan includes 30 day free trial</p>
+
+      <div class="price-card__setup-inner">
+        <p class="price-card__setup-info">
+          For more details on all our pricing visit
+          <a class="price-card__setup-link" href="#">here</a>
+        </p>
+        <div class="price-card__setup-selects-inner">
+          <div class="price-card__setup-select">
+            <label class="price-card__setup-label">
+              Plan
+              <button id="planButton" class="price-card__setup-button">
+                <span id="selectedPlan">Monthly</span>
+
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_68)">
+                    <path d="M7.5 10L3.75 6.25H11.25L7.5 10Z" fill="black" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_68">
+                      <rect width="15" height="15" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>                
+              </button>
+              <div id="availablesPlans" class="price-card__setup-button-setups"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-card__cards-inner">
+        <div class="price-card__card card">
+          <div class="card__title-box">
+            <h4 class="card__title">Basic</h4>
+
+            <svg class="card__title-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_77)">
+                <path
+                  d="M6 19H18V9.157L12 3.703L6 9.157V19ZM19 21H5C4.73478 21 4.48043 20.8946 4.29289 20.7071C4.10536 20.5196 4 20.2652 4 20V11H1L11.327 1.612C11.5111 1.44448 11.7511 1.35164 12 1.35164C12.2489 1.35164 12.4889 1.44448 12.673 1.612L23 11H20V20C20 20.2652 19.8946 20.5196 19.7071 20.7071C19.5196 20.8946 19.2652 21 19 21ZM7.5 13H9.5C9.5 13.663 9.76339 14.2989 10.2322 14.7678C10.7011 15.2366 11.337 15.5 12 15.5C12.663 15.5 13.2989 15.2366 13.7678 14.7678C14.2366 14.2989 14.5 13.663 14.5 13H16.5C16.5 14.1935 16.0259 15.3381 15.182 16.182C14.3381 17.0259 13.1935 17.5 12 17.5C10.8065 17.5 9.66193 17.0259 8.81802 16.182C7.97411 15.3381 7.5 14.1935 7.5 13Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_77">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <span class="card__price" data-card-price="9.99">$9.99</span>
+          <p class="card__text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem
+          </p>
+          <ul class="card__list">
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                  fill="#0F0F0F" />
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                  fill="#0F0F0F" />
+              </svg>
+              It is a long established
+            </li>
+          </ul>
+
+          <button class="button card__button">Sign Up</button>
+        </div>
+        <div class="price-card__card card">
+          <div class="card__title-box">
+            <h4 class="card__title">Standard</h4>
+
+            <svg class="card__title-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_24)">
+                <path
+                  d="M14.121 10.48C13.9335 10.2925 13.6792 10.1872 13.414 10.1872C13.1488 10.1872 12.8945 10.2925 12.707 10.48L12 11.186C11.8155 11.377 11.5948 11.5294 11.3508 11.6342C11.1068 11.739 10.8444 11.7942 10.5788 11.7965C10.3132 11.7988 10.0499 11.7482 9.80409 11.6476C9.5583 11.5471 9.335 11.3986 9.14721 11.2108C8.95942 11.023 8.81092 10.7997 8.71036 10.5539C8.60979 10.3081 8.55919 10.0448 8.5615 9.7792C8.56381 9.51364 8.61898 9.2512 8.7238 9.00719C8.82861 8.76319 8.98098 8.5425 9.172 8.358L14.802 2.726C16.1349 2.42283 17.5295 2.5476 18.7874 3.08258C20.0454 3.61755 21.1026 4.5355 21.8089 5.7059C22.5151 6.87629 22.8344 8.23955 22.7213 9.60183C22.6082 10.9641 22.0686 12.2561 21.179 13.294L19.071 15.429L14.121 10.479V10.48ZM3.161 4.468C4.19576 3.43338 5.54922 2.77798 7.00256 2.60777C8.4559 2.43756 9.92418 2.76248 11.17 3.53L7.757 6.944C7.0178 7.68173 6.59643 8.6793 6.58294 9.72356C6.56944 10.7678 6.96489 11.776 7.68478 12.5325C8.40467 13.2891 9.39191 13.7342 10.4356 13.7725C11.4792 13.8109 12.4965 13.4396 13.27 12.738L13.414 12.601L17.657 16.843L13.414 21.086C13.0389 21.4609 12.5303 21.6716 12 21.6716C11.4697 21.6716 10.9611 21.4609 10.586 21.086L3.16 13.66C1.94113 12.441 1.25639 10.7878 1.25639 9.064C1.25639 7.34019 1.94113 5.68697 3.16 4.468H3.161Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_24">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <span class="card__price" data-card-price="29.99">$29.99</span>
+          <p class="card__text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem
+          </p>
+          <ul class="card__list">
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                  fill="#0F0F0F" />
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                  fill="#0F0F0F" />
+              </svg>
+              It is a long established
+            </li>
+          </ul>
+
+          <button class="button card__button">Sign Up</button>
+        </div>
+        <div class="price-card__card card">
+          <div class="card__title-box">
+            <h4 class="card__title">Standard</h4>
+
+            <svg class="card__title-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_74)">
+                <path
+                  d="M21 20H23V22H1V20H3V3C3 2.73478 3.10536 2.48043 3.29289 2.29289C3.48043 2.10536 3.73478 2 4 2H20C20.2652 2 20.5196 2.10536 20.7071 2.29289C20.8946 2.48043 21 2.73478 21 3V20ZM19 20V4H5V20H19ZM8 11H11V13H8V11ZM8 7H11V9H8V7ZM8 15H11V17H8V15ZM13 15H16V17H13V15ZM13 11H16V13H13V11ZM13 7H16V9H13V7Z"
+                  fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_74">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
+          <span class="card__price" data-card-price="59.99">$59.99</span>
+
+          <p class="card__text">
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking
+            at its layout. The point of using Lorem
+          </p>
+          <ul class="card__list">
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+            <li class="card__item">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#000000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </svg>
+              It is a long established
+            </li>
+          </ul>
+
+          <button class="button card__button">Sign Up</button>
+        </div>
+      </div>
 
     </section>
   </body>
