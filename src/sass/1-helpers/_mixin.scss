@@ -1,6 +1,7 @@
 %card-price-shadow {
-  box-shadow: 0px 4px 4px 0px rgba(152, 149, 149, 0.25); 
+  box-shadow: 0px 4px 5px 0px rgba(152, 149, 149, 0.25); 
 }
+
 
 @mixin desctop {
   @media (min-width: 1200px) {

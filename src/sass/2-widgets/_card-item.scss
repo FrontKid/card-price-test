@@ -1,0 +1,80 @@
+.card {
+  padding: 28px 25px 70px;
+  @extend %card-price-shadow;
+  transition: transform baseTransition($transition-duration);
+  position: relative;
+
+  &__title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: toRem(30);
+    font-weight: 700;
+    margin-bottom: toRem(36);
+  }
+
+  &__title {
+    color: $secondary;
+  }
+
+  &__title-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__price {
+    font-size: toRem(50);
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-bottom: toRem(36);
+  }
+
+  &__text {
+    margin-bottom: toRem(44);
+    color: $text;
+  }
+
+  &__list {
+    display: flex;
+    font-weight: 700;
+    flex-direction: column;
+    row-gap: toRem(34);
+    list-style-type: none;
+    margin-bottom: toRem(45);
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 49px;
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @include desctop {
+    &:hover {
+      transform: translateY(-30px);
+    }
+
+    &__title-icon path{
+      transition: fill baseTransition(0.3);
+    }
+
+    &:hover &__title-icon path {
+      fill: $button-red;
+    }
+  }
+}

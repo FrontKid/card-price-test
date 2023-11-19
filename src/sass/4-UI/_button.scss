@@ -1,0 +1,17 @@
+.button {
+  padding: toRem(24);
+  width: 100%;
+  border: none;
+  background-color: $button-grey;
+  color: $secondary;
+  font-weight: 700;
+  transition:
+    color baseTransition($transition-duration),
+    background-color baseTransition($transition-duration);
+  cursor: pointer;
+
+  &:hover {
+    color: $button-white;
+    background-color: $button-red;
+  }
+}

@@ -1,3 +1,7 @@
 @function toRem($px) {
   @return calc($px / $font-size * 1rem);
 }
+
+@function baseTransition($sec) {
+  @return $sec + s ease 0s
+}

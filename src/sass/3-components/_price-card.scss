@@ -32,6 +32,7 @@
     font-size: toRem(14);
     row-gap: toRem(20);
     padding-bottom: toRem(26);
+    margin-bottom: toRem(26);
 
     position: relative;
 
@@ -49,6 +50,11 @@
       flex-direction: row;
       justify-content: space-between;
       padding-bottom: toRem(36);
+      margin-bottom: toRem(50);
+    }
+
+    @include desctop {
+      margin-bottom: toRem(97);
     }
   }
 
@@ -70,5 +76,21 @@
 
   &__setup-select-name {
     margin-right: toRem(15);
+  }
+
+  .price-card__cards-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    row-gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 30px;
+    }
+
+    @include desctop {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 30px;
+    }
   }
 }
