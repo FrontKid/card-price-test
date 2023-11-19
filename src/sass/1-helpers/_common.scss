@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: $font-size + px;
 }
 
 body {
@@ -24,10 +24,10 @@ p {
 }
 
 .container {
-  padding: 0 1rem;
+  padding: 0 toRem(16);
 
   @media (min-width: 700px) {
-    padding: 0 2rem;
+    padding: 0 toRem(16);
   }
 
   @media (min-width: 1200px) {
@@ -37,25 +37,25 @@ p {
 }
 
 .title {
-  font-size: 20px;
+  font-size: toRem(20);
   color: $secondary;
   font-weight: 700;
 
   @include tablet {
-    font-size: 30px;
+    font-size: toRem(30);
   }
 
   @include desctop {
-    font-size: 40px;
+    font-size: toRem(40);
   }
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: toRem(14);
   color: $secondary;
   font-weight: 700;
 
   @include tablet {
-    font-size: 16px;
+    font-size: toRem(16);
   }
 }

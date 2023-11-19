@@ -1,37 +1,37 @@
 .price-card {
-  padding-block: 32px;
+  padding-block: toRem(32);
 
   @include tablet {
-    padding-block: 62px;
+    padding-block: toRem(62);
   }
   @include desctop {
-    padding-block: 82px;
+    padding-block: toRem(82);
   }
 
   &__title {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: toRem(5);
   }
 
   &__subtitle {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: toRem(15);
 
     @include tablet {
-      margin-bottom: 35px;
+      margin-bottom: toRem(35);
     }
 
     @include desctop {
-      margin-bottom: 60px;
+      margin-bottom: toRem(60);
     }
   }
 
   &__setup-inner {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-    row-gap: 20px;
-    padding-bottom: 26px;
+    font-size: toRem(14);
+    row-gap: toRem(20);
+    padding-bottom: toRem(26);
 
     position: relative;
 
@@ -48,7 +48,7 @@
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
-      padding-bottom: 36px;
+      padding-bottom: toRem(36);
     }
   }
 
@@ -59,16 +59,16 @@
   &__setup-selects-inner {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: toRem(20);
 
     @include tablet {
-      column-gap: 50px;
+      column-gap: toRem(50);
       row-gap: 0;
       flex-direction: row;
     }
   }
 
   &__setup-select-name {
-    margin-right: 15px;
+    margin-right: toRem(15);
   }
 }
