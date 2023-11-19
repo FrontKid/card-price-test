@@ -72,6 +72,62 @@
       row-gap: 0;
       flex-direction: row;
     }
+  } 
+
+  &__setup-label {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__setup-button {
+    border: none;
+    background-color: $price-card-border; 
+    border-radius: toRem(100);
+    padding: toRem(4) toRem(28) toRem(4) toRem(12);
+    position: relative;
+    width: 98px;
+    z-index: 10;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+
+    svg {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+
+  &__setup-button-setups {
+    display: none;
+    flex-direction: column;
+    row-gap: 4px;
+    align-items: start;
+    position: absolute;
+    background-color: $price-card-border;
+    border-top: none;
+    top: 10px;
+    right: 0px;
+    width: 98px;
+    z-index: 5;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: toRem(20) toRem(28) toRem(4) toRem(12);
+    
+    button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    
+    &.isOpen {
+      display: flex;
+    }
+  }
+  
+  &__setup-button-element.isChoisen {
+    opacity: 0.5;
   }
 
   &__setup-select-name {

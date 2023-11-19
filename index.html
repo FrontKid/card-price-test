@@ -22,17 +22,22 @@
           <div class="price-card__setup-select">
             <label class="price-card__setup-label">
               Plan
-              <button class="price-card__setup-button">
-                Monthly
+              <button id="planButton" class="price-card__setup-button">
+                <span id="selectedPlan">Monthly</span>
+
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_68)">
+                    <path d="M7.5 10L3.75 6.25H11.25L7.5 10Z" fill="black" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_68">
+                      <rect width="15" height="15" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>                
               </button>
+              <div id="availablesPlans" class="price-card__setup-button-setups"></div>
             </label>
-          </div>
-          <div class="price-card__setup-select">
-            <span class="price-card__setup-select-name">Select currency</span>
-            <select name="" id="">
-              <option value="">$ USD</option>
-              <option value="">& UAH</option>
-            </select>
           </div>
         </div>
       </div>
@@ -56,7 +61,7 @@
               </defs>
             </svg>
           </div>
-          <span class="card__price">$9.99</span>
+          <span class="card__price" data-card-price="9.99">$9.99</span>
           <p class="card__text">
             It is a long established fact that a reader will be distracted by the readable content of a page when
             looking
@@ -110,7 +115,7 @@
               </defs>
             </svg>
           </div>
-          <span class="card__price">$29.99</span>
+          <span class="card__price" data-card-price="29.99">$29.99</span>
           <p class="card__text">
             It is a long established fact that a reader will be distracted by the readable content of a page when
             looking
@@ -174,7 +179,7 @@
             </svg>
           </div>
 
-          <span class="card__price">$59.99</span>
+          <span class="card__price" data-card-price="59.99">$59.99</span>
 
           <p class="card__text">
             It is a long established fact that a reader will be distracted by the readable content of a page when
